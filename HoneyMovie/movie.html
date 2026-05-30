@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Details — HoneyMovie</title>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/themes.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/theme.js" defer></script>
+</head>
+<body class="page-detail">
+  <header class="navbar">
+    <a href="index.html" class="logo">HoneyMovie</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="mylist.html">My List</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="nav-mylist-wrap">
+        <a href="mylist.html" class="btn-icon" title="My List" aria-label="My List">📋</a>
+        <span class="badge-count hidden" data-mylist-count>0</span>
+      </div>
+      <button type="button" class="btn-icon" data-theme-toggle aria-label="Toggle theme">
+        <span data-theme-icon>☀️</span>
+      </button>
+      <button type="button" class="nav-toggle" data-nav-toggle aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div id="not-found" class="not-found hidden">
+    <h1>Movie not found</h1>
+    <p><a href="index.html" class="btn btn-primary">Back to Home</a></p>
+  </div>
+
+  <section class="detail-hero">
+    <div class="detail-banner" id="detail-banner"></div>
+    <div class="detail-banner-overlay"></div>
+    <div class="detail-hero-content">
+      <h1 class="detail-title" id="detail-title"></h1>
+      <p class="detail-rating" id="detail-rating"></p>
+      <p class="detail-stars" id="detail-stars"></p>
+      <div class="detail-meta" id="detail-meta"></div>
+      <p class="rating-breakdown" id="rating-breakdown"></p>
+      <div class="detail-actions">
+        <button type="button" class="btn btn-secondary" id="detail-save">
+          <span>+</span> Add to My List
+        </button>
+        <a href="index.html" class="btn btn-primary">Browse More</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="detail-main">
+    <div class="detail-info">
+      <div class="detail-description">
+        <h2>Plot Summary</h2>
+        <p id="detail-description"></p>
+      </div>
+      <div class="detail-cast">
+        <h2>Cast</h2>
+        <ul id="detail-cast"></ul>
+      </div>
+    </div>
+
+    <aside class="reviews-section">
+      <h2>User Reviews</h2>
+      <p class="reviews-avg" id="reviews-avg"></p>
+      <form class="review-form" id="review-form">
+        <input type="text" name="name" placeholder="Your name" required maxlength="60" />
+        <select name="rating" required aria-label="Your rating">
+          <option value="10">10 — Masterpiece</option>
+          <option value="9">9 — Excellent</option>
+          <option value="8" selected>8 — Great</option>
+          <option value="7">7 — Good</option>
+          <option value="6">6 — Okay</option>
+          <option value="5">5 — Average</option>
+          <option value="4">4 — Below average</option>
+          <option value="3">3 — Poor</option>
+          <option value="2">2 — Bad</option>
+          <option value="1">1 — Terrible</option>
+        </select>
+        <textarea name="comment" placeholder="Write your review…" required maxlength="500"></textarea>
+        <button type="submit" class="btn btn-primary">Submit Review</button>
+      </form>
+      <div class="reviews-list" id="reviews-list"></div>
+    </aside>
+  </div>
+
+  <section class="section" id="related-section">
+    <h2 class="section-title">Related Movies</h2>
+    <div class="carousel-row" id="related-row">
+      <button type="button" class="carousel-btn prev" aria-label="Scroll left">‹</button>
+      <div class="carousel-track"></div>
+      <button type="button" class="carousel-btn next" aria-label="Scroll right">›</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>HoneyMovie — Reviews &amp; information only. No video playback.</p>
+  </footer>
+
+  <script src="js/movies.js"></script>
+  <script src="js/reviews.js"></script>
+  <script src="js/mylist.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/movieDetails.js"></script>
+</body>
+</html>

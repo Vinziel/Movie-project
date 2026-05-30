@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My List — HoneyMovie</title>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/themes.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/theme.js" defer></script>
+</head>
+<body class="page-mylist">
+  <header class="navbar">
+    <a href="index.html" class="logo">HoneyMovie</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="mylist.html" class="active">My List</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="nav-mylist-wrap">
+        <a href="mylist.html" class="btn-icon" title="My List" aria-label="My List">📋</a>
+        <span class="badge-count hidden" data-mylist-count>0</span>
+      </div>
+      <button type="button" class="btn-icon" data-theme-toggle aria-label="Toggle theme">
+        <span data-theme-icon>☀️</span>
+      </button>
+      <button type="button" class="nav-toggle" data-nav-toggle aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <header class="page-header">
+    <h1>My List</h1>
+    <p>Movies you've saved for later. Click + on any card to remove.</p>
+  </header>
+
+  <div id="mylist-empty" class="empty-state">
+    <p>Your list is empty. Browse movies and tap + to save them here.</p>
+    <a href="index.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-flex;">Explore Movies</a>
+  </div>
+
+  <div class="mylist-grid hidden" id="mylist-grid"></div>
+
+  <footer class="footer">
+    <p>HoneyMovie — Your personal watchlist.</p>
+  </footer>
+
+  <script src="js/movies.js"></script>
+  <script src="js/reviews.js"></script>
+  <script src="js/mylist.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/mylist-page.js"></script>
+</body>
+</html>
